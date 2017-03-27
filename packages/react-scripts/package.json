@@ -1,5 +1,5 @@
 {
-  "name": "@reactmarket/react-scripts",
+  "name": "reactmarket-react-scripts",
   "version": "0.9.5",
   "description": "Configuration and scripts for Create React App (updated by ReactMarket).",
   "repository": "facebookincubator/create-react-app",
