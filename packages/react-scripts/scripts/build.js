@@ -143,7 +143,8 @@ function build(previousFileSizes) {
         console.log('Your component was built assuming it will be consumed by an app as follows.');
         console.log();
         console.log('Before npm publish:')
-        console.log(chalk.green("import MyComponent from '" + chalk.cyan(paths.appBuild) + "';"))
+        console.log(chalk.green("import MyComponent from '" + chalk.cyan(paths.appBuild + "/static/js/main.js") + "';"))
+        console.log();
         console.log('After npm publish:');
         console.log(chalk.green("import MyComponent from '" + chalk.cyan('MyComponent') + "';"))
         console.log();
