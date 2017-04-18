@@ -66,8 +66,7 @@ module.exports = {
   devtool: 'source-map',
   // In production, we only want to load the polyfills and the app code.
   entry: [
-    require.resolve('./polyfills'),
-    paths.appIndexJs
+    paths.componentIndexJs
   ],
   output: {
     // The build folder.
@@ -75,10 +74,15 @@ module.exports = {
     // Generated JS file names (with nested folders).
     // There will be one main bundle, and one file per asynchronous chunk.
     // We don't currently advertise code splitting but Webpack supports it.
-    filename: 'static/js/[name].[chunkhash:8].js',
+    filename: 'static/js/[name].js',
     chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
     // We inferred the "public path" (such as / or /my-project) from homepage.
-    publicPath: publicPath
+    publicPath: publicPath,
+    libraryTarget: 'commonjs2'
+  },
+  externals: {
+    // Use external version of React
+    'react': 'react'
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
