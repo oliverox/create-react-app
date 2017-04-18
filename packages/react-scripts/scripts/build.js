@@ -21,8 +21,8 @@ require('dotenv').config({silent: true});
 
 var chalk = require('chalk');
 var fs = require('fs-extra');
-var path = require('path');
-var url = require('url');
+// var path = require('path');
+// var url = require('url');
 var webpack = require('webpack');
 var config = require('../config/webpack.config.prod');
 var paths = require('../config/paths');
@@ -92,14 +92,16 @@ function build(previousFileSizes) {
     var appPackage  = require(paths.appPackageJson);
     var publicUrl = paths.publicUrl;
     var publicPath = config.output.publicPath;
-    var publicPathname = url.parse(publicPath).pathname;
+    // var publicPathname = url.parse(publicPath).pathname;
     if (publicUrl && publicUrl.indexOf('.github.io/') !== -1) {
       // "homepage": "http://user.github.io/project"
-      console.log('The project was built assuming it is hosted at ' + chalk.green(publicPathname) + '.');
-      console.log('You can control this with the ' + chalk.green('homepage') + ' field in your '  + chalk.cyan('package.json') + '.');
+      console.log('Your component was built assuming it will be consumed by an app as follows.');
       console.log();
-      console.log('The ' + chalk.cyan('build') + ' folder is ready to be deployed.');
-      console.log('To publish it at ' + chalk.green(publicUrl) + ', run:');
+      console.log('Before npm publish:')
+      console.log(chalk.green("import MyComponent from '" + chalk.cyan(paths.appBuild) + "';"))
+      console.log('After npm publish:');
+      console.log(chalk.green("import MyComponent from '" + chalk.cyan('MyComponent') + "';"))
+      
       // If script deploy has been added to package.json, skip the instructions
       if (typeof appPackage.scripts.deploy === 'undefined') {
         console.log();
@@ -145,17 +147,17 @@ function build(previousFileSizes) {
         console.log('  ' + chalk.green('"homepage"') + chalk.cyan(': ') + chalk.green('"http://myname.github.io/myapp"') + chalk.cyan(','));
         console.log();
       }
-      var build = path.relative(process.cwd(), paths.appBuild);
-      console.log('The ' + chalk.cyan(build) + ' folder is ready to be deployed.');
-      console.log('You may serve it with a static server:');
-      console.log();
-      if (useYarn) {
-        console.log(`  ${chalk.cyan('yarn')} global add serve`);
-      } else {
-        console.log(`  ${chalk.cyan('npm')} install -g serve`);
-      }
-      console.log(`  ${chalk.cyan('serve')} -s build`);
-      console.log();
+      // var build = path.relative(process.cwd(), paths.appBuild);
+      // console.log('The ' + chalk.cyan(build) + ' folder is ready to be deployed.');
+      // console.log('You may serve it with a static server:');
+      // console.log();
+      // if (useYarn) {
+      //   console.log(`  ${chalk.cyan('yarn')} global add serve`);
+      // } else {
+      //   console.log(`  ${chalk.cyan('npm')} install -g serve`);
+      // }
+      // console.log(`  ${chalk.cyan('serve')} -s build`);
+      // console.log();
     }
   });
 }
