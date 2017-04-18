@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from './Component';
+import Button from './index';
 import logo from './logo.svg';
 import './App.css';
 
@@ -15,7 +15,7 @@ class App extends Component {
           <h2>Welcome to React Market Component Builder</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/Component.js</code> and save to reload 
+          To get started, edit <code>src/index.js</code> and save to reload 
           the sample component rendered below.
         </p>
         <Button onClick={handleClick}>Sample Button Component</Button>
