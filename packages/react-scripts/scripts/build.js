@@ -140,11 +140,12 @@ function build(previousFileSizes) {
         console.log();
       } else {
         // no homepage
-        console.log('The project was built assuming it is hosted at the server root.');
-        console.log('To override this, specify the ' + chalk.green('homepage') + ' in your '  + chalk.cyan('package.json') + '.');
-        console.log('For example, add this to build it for GitHub Pages:')
+        console.log('Your component was built assuming it will be consumed by an app as follows.');
         console.log();
-        console.log('  ' + chalk.green('"homepage"') + chalk.cyan(': ') + chalk.green('"http://myname.github.io/myapp"') + chalk.cyan(','));
+        console.log('Before npm publish:')
+        console.log(chalk.green("import MyComponent from '" + chalk.cyan(paths.appBuild) + "';"))
+        console.log('After npm publish:');
+        console.log(chalk.green("import MyComponent from '" + chalk.cyan('MyComponent') + "';"))
         console.log();
       }
       // var build = path.relative(process.cwd(), paths.appBuild);
