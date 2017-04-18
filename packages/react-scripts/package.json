@@ -1,6 +1,6 @@
 {
   "name": "test-react-scripts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Configuration and scripts for Create React App.",
   "repository": "facebookincubator/create-react-app",
   "license": "BSD-3-Clause",
@@ -63,6 +63,7 @@
     "whatwg-fetch": "2.0.2"
   },
   "devDependencies": {
+    "prop-types": "^15.5.8",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
   },
