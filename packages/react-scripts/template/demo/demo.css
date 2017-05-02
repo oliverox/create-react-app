@@ -11,6 +11,7 @@ body {
 .demo-logo {
   animation: demo-logo-spin infinite 20s linear;
   height: 25px;
+  vertical-align: middle;
 }
 
 .demo-header {
