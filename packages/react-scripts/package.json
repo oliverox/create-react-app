@@ -1,8 +1,8 @@
 {
   "name": " @reactmarket/component-generator",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "React component generator: create-react-app <component_name> --scripts-version  @reactmarket/component-generator",
-  "repository": "facebookincubator/create-react-app",
+  "repository": "oliverox/create-react-app",
   "license": "BSD-3-Clause",
   "engines": {
     "node": ">=4"
