@@ -1,6 +1,6 @@
 {
   "name": " @reactmarket/component-generator",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "React component generator: create-react-app <component_name> --scripts-version  @reactmarket/component-generator",
   "repository": "oliverox/create-react-app",
   "license": "BSD-3-Clause",
