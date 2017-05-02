@@ -1,7 +1,7 @@
 {
-  "name": "test-react-scripts",
-  "version": "0.0.8",
-  "description": "Configuration and scripts for Create React App.",
+  "name": " @reactmarket/component-generator",
+  "version": "0.0.9",
+  "description": "React component generator: create-react-app <component_name> --scripts-version  @reactmarket/component-generator",
   "repository": "facebookincubator/create-react-app",
   "license": "BSD-3-Clause",
   "engines": {
