@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import DemoComponent from '../index';
+import DemoComponent from '../src/index';
 import logo from './logo.svg';
 import './demo.css';
 
