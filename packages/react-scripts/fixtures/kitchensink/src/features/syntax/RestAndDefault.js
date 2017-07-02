@@ -7,7 +7,8 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 function load({ id, ...rest } = { id: 0, user: { id: 42, name: '42' } }) {
   return [
@@ -40,7 +41,11 @@ export default class extends Component {
   render() {
     return (
       <div id="feature-rest-and-default">
-        {this.state.users.map(user => <div key={user.id}>{user.name}</div>)}
+        {this.state.users.map(user =>
+          <div key={user.id}>
+            {user.name}
+          </div>
+        )}
       </div>
     );
   }

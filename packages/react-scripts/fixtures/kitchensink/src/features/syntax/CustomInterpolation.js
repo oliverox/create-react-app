@@ -7,7 +7,8 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const styled = ([style]) =>
   style
@@ -52,9 +53,11 @@ export default class extends Component {
 
     return (
       <div id="feature-custom-interpolation">
-        {this.state.users.map(user => (
-          <div key={user.id} style={veryInlineStyle}>{user.name}</div>
-        ))}
+        {this.state.users.map(user =>
+          <div key={user.id} style={veryInlineStyle}>
+            {user.name}
+          </div>
+        )}
       </div>
     );
   }
